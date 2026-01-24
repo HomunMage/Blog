@@ -1,17 +1,19 @@
 ---
 layout: base
+title: All Articles
 ---
 
 <main class="post-content">
-  <h2>Articles：</h2>
+  <h2>All Articles:</h2>
   <ul>
-  {% assign filtered_pages = site.pages %}  
-  {% assign sorted_pages = filtered_pages | sort: 'date' | reverse %}
-  {% for p in sorted_pages %}
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% for post in sorted_posts %}
       <li>
-        <a style="font-size: 2em;" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-        {{ p.date | date: "%B %d, %Y" }}
-        <div>{{ p.content | markdownify }}</div>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="color: #888;">{{ post.date | date: "%Y-%m-%d" }}</span>
+        {% for tag in post.tags %}
+          <span style="background: #333; padding: 2px 6px; border-radius: 3px; font-size: 0.8em;">{{ tag }}</span>
+        {% endfor %}
       </li>
   {% endfor %}
   </ul>

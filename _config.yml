@@ -31,19 +31,21 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "board"
+      layout: "page/blog/blog"
       
 feed:
   output: true
 
-# Build settings
-remote_theme: jekyll/minima
+
 
 exclude:
   - _includes/.git/
   - _layouts/.git/
   - _layouts/page/.git/
   - assets/.git/
+
+# Build settings
+remote_theme: jekyll/minima
 
 minima:
   skin: dark
