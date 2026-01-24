@@ -22,9 +22,9 @@ title: HomunMage
 email: homun@posetmage.com
 url: https://homun.posetmage.com/ # the base hostname & protocol for your site, e.g. http://example.com
 
-description: Blogs
-baseurl: /Blogs # the subpath of your site, e.g. /blog
-repository: homunmage/Blogs
+description: Blog
+baseurl: /Blog # the subpath of your site, e.g. /blog
+repository: homunmage/Blog
 
 defaults:
   -
@@ -32,11 +32,9 @@ defaults:
       path: ""
     values:
       layout: "page/blog/blog"
-      
-feed:
-  output: true
 
-
+kramdown:
+  parse_block_html: true
 
 exclude:
   - _includes/.git/
