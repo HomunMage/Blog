@@ -2,7 +2,7 @@
 
 title:  "Aggressive AI Adoption Policies in Companies"
 date:   2025-05-03 10:00:00 +0800
-tags: [Money]
+tags: [Business]
 ---
 
 ## Introduction 

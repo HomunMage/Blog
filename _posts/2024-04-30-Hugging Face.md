@@ -2,7 +2,7 @@
 
 title:  "Hugging Face is an amazing company"
 date:   2024-04-30 10:00:00 +0800
-tags: [Money]
+tags: [Business]
 ---
 
 [ Huggingface凭什么估值45亿美金？抱抱脸的AI核心竞争力！ ](https://www.youtube.com/watch?v=EWxEmNzedmc)
