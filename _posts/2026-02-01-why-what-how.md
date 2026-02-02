@@ -5,8 +5,6 @@ date:   2026-02-01 10:00:00 +0800
 tags: [Programming]
 ---
 
-# 
-
 ## 🐣 A Story About Growing Up in Tech
 
 Last week, I watched a junior developer named Amy debug a sorting algorithm for three hours. She finally fixed it. Her code was beautiful—clean, efficient, O(n log n).
