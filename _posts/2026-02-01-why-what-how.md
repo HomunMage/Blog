@@ -1,5 +1,4 @@
 ---
-
 title:  "The Confused Junior Developer and the Three Questions"
 date:   2026-02-01 10:00:00 +0800
 tags: [Programming]
