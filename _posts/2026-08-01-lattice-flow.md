@@ -1,5 +1,5 @@
 ---
-title:  "Alchemy Flow: Git Flow's Shape, Trunk-Based's Mind"
+title:  "Lattice Flow: Git Flow's Shape, Trunk-Based's Mind"
 date:   2026-08-01 10:00:00 +0800
 tags: [Programming]
 ---
@@ -10,7 +10,7 @@ Git Flow and Trunk-Based Development (TBD) solve for different things, and teams
 
 **TBD** models the *discipline* well: one trunk, short branches, fast convergence, no long-lived side branches.
 
-What neither one names explicitly is environment: most SaaS teams run separate dev, stage, and prod, and want to know exactly which one a commit is in. Combining the two ideas — Git Flow's staged handoff, TBD's single trunk — is what I ended up calling **Alchemy Flow**.
+What neither one names explicitly is environment: most SaaS teams run separate dev, stage, and prod, and want to know exactly which one a commit is in. Combining the two ideas — Git Flow's staged handoff, TBD's single trunk — is what I ended up calling **Lattice Flow**.
 
 ## The Rule
 
@@ -18,7 +18,7 @@ What neither one names explicitly is environment: most SaaS teams run separate d
 
 Dev and stage can bind to branches — they're supposed to churn. Production binds to a tag instead: a name you chose on purpose, not wherever a branch happens to be right now.
 
-<img src="{{ site.baseurl }}/blob/Programming/2026-08-01-alchemy-flow.svg" width="800" style="max-width: 100%; height: auto;" alt="Alchemy Flow: feature branches from main at 1.3.4 and merges back as 1.4.0; main keeps hardening through 1.4.1 to 1.4.3; prod fast-forwards from tag 1.3.4 to tag 1.4.3">
+<img src="{{ site.baseurl }}/blob/Programming/2026-08-01-lattice-flow.svg" width="800" style="max-width: 100%; height: auto;" alt="Lattice Flow: feature branches from main at 1.3.4 and merges back as 1.4.0; main keeps hardening through 1.4.1 to 1.4.3; prod fast-forwards from tag 1.3.4 to tag 1.4.3">
 
 Three lanes, three environments, time flowing bottom to top.
 
@@ -42,7 +42,7 @@ Production was on `1.3.4`. Now it's on `1.4.3`. It never touched `1.4.0`, `1.4.1
 
 ## Where It Sits Between the Two
 
-| | Git Flow | TBD | Alchemy Flow |
+| | Git Flow | TBD | Lattice Flow |
 |---|---|---|---|
 | Long-lived branches | 2+ | 1 | 1 |
 | Where you stabilize | `release/*` | behind flags | on `main` (= stage) |
@@ -50,7 +50,7 @@ Production was on `1.3.4`. Now it's on `1.4.3`. It never touched `1.4.0`, `1.4.1
 | Fixes go to | a hotfix branch | trunk | trunk |
 | "What's in prod?" | check the release branch | check the deploy log | read the tag |
 
-Alchemy Flow keeps Git Flow's separation between *merged* and *shipped*, using tags in place of `release/*` and `hotfix/*` — a tag freezes a state without needing its own branch. It keeps TBD's one-trunk discipline, and adds an explicit binding between branch and environment on top of it.
+Lattice Flow keeps Git Flow's separation between *merged* and *shipped*, using tags in place of `release/*` and `hotfix/*` — a tag freezes a state without needing its own branch. It keeps TBD's one-trunk discipline, and adds an explicit binding between branch and environment on top of it.
 
 ## Where It Doesn't Fit
 
